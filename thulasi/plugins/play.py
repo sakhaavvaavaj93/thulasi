@@ -162,15 +162,15 @@ async def play(event):
             titlegc = chat.title
             ctitle = await CHAT_TITLE(titlegc)
             thumb = await gen_thumb(thumbnail, title, userid, ctitle)
-            format = "best[height<=?320][width<=?640]"
+            format = "best[height<=?720][width<=?1280]"
             hm, ytlink = await ytdl(format, url)
             if hm == 0:
                 await botman.edit(f"`{ytlink}`")
             elif chat_id in QUEUE:
                 pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                caption = f"**playing..on.Vc**"
+             #   caption = f"**playing..on.Vc**"
                 await botman.delete()
-                await event.client.send_file(chat_id, caption=caption)
+              #  await event.client.send_file(chat_id, caption=caption)
             else:
                 try:
                     await call_py.join_group_call(
@@ -181,9 +181,9 @@ async def play(event):
                         stream_type=StreamType().pulse_stream,
                     )
                     add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                    caption = f"**playing..on.Vc**"
+                 #   caption = f"**playing..on.Vc**"
                     await botman.delete()
-                    await event.client.send_file(chat_id,caption=caption)
+                 #   await event.client.send_file(chat_id,caption=caption)
                 except Exception as ep:
                     clear_queue(chat_id)
                     await botman.edit(f"`{ep}`")
@@ -198,8 +198,8 @@ async def play(event):
             songname = "Voice Note"
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            caption = fcaption = f"**playing..on.Vc**"
-            await event.client.send_file(chat_id,caption=caption)
+       #     caption = fcaption = f"**playing..on.Vc**"
+       #     await event.client.send_file(chat_id,caption=caption)
             await botman.delete()
         else:
             try:
@@ -211,8 +211,8 @@ async def play(event):
                     stream_type=StreamType().pulse_stream,
                 )
                 add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-                caption = fcaption = f"playing..on.Vc"
-                await event.client.send_file(chat_id, caption=caption)
+            #    caption = fcaption = f"playing..on.Vc"
+            #    await event.client.send_file(chat_id, caption=caption)
                 await botman.delete()
             except Exception as ep:
                 clear_queue(chat_id)
@@ -231,7 +231,7 @@ async def vc_end(event, perm):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await event.reply("**Streaming Ended**")
+         #   await event.reply("**Streaming Ended**")
         except Exception as e:
             await event.reply(f"**ERROR:** `{e}`")
     else:
@@ -292,8 +292,8 @@ async def vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"💡 **Video Streaming Queue »** `#{pos}`"
-                await event.client.send_file(chat_id, caption=caption)
+              #  caption = f"💡 **Video Streaming Queue »** `#{pos}`"
+              #  await event.client.send_file(chat_id, caption=caption)
             else:
                 try:
                     await call_py.join_group_call(
@@ -309,10 +309,10 @@ async def vplay(event):
                         "Video",
                         RESOLUSI)
                     await xnxx.delete()
-                    await event.client.send_file(event.chat_id,
-                        f"**🏷 **__Video Streaming Started__**:** [{songname}]({url})\n**⏱ Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Requested:** {from_user}, buttons=btnn",
-                        link_preview=False,
-                    )
+                #    await event.client.send_file(event.chat_id,
+                #        f"**🏷 **__Video Streaming Started__**:** [{songname}]({url})\n**⏱ Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Requested:** {from_user}, buttons=btnn",
+                #        link_preview=False,
+                #    )
                 except Exception as ep:
                     clear_queue(chat_id)
                     await xnxx.edit(f"`{ep}`")
@@ -330,8 +330,8 @@ async def vplay(event):
             songname = "Telegram Video Player"
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
-            caption = f"💡 **Video Streaming Started »** `#{pos}`"
-            await event.client.send_file(chat_id, caption=caption)
+         #   caption = f"💡 **Video Streaming Started »** `#{pos}`"
+         #   await event.client.send_file(chat_id, caption=caption)
             await xnxx.delete()
         else:
             if RESOLUSI == 360:
@@ -347,8 +347,8 @@ async def vplay(event):
                     stream_type=StreamType().pulse_stream,
                 )
                 add_to_queue(chat_id, songname, dl, link, "Video", RESOLUSI)
-                caption = f"**playing...**"
-                await event.client.send_file(chat_id, caption=caption)
+          #      caption = f"**playing...**"
+          #      await event.client.send_file(chat_id, caption=caption)
             except Exception as ep:
                 clear_queue(chat_id)
                 await xnxx.edit(f"`{ep}`")
@@ -375,8 +375,8 @@ async def vplay(event):
             elif chat_id in QUEUE:
                 pos = add_to_queue(
                     chat_id, songname, ytlink, url, "Video", RESOLUSI)
-                caption = f"**Video Streaming Added in Queue »** `#{pos}`"
-                await event.client.send_file(chat_id, caption=caption)
+          #      caption = f"**Video Streaming Added in Queue »** `#{pos}`"
+          #      await event.client.send_file(chat_id, caption=caption)
             else:
                 try:
                     await call_py.join_group_call(
@@ -391,9 +391,9 @@ async def vplay(event):
                         url,
                         "Video",
                         RESOLUSI)
-                    caption = f"`Playing`"
+                #    caption = f"`Playing`"
                     await xnxx.delete()
-                    await event.client.send_file(chat_id, caption=caption)
+                #    await event.client.send_file(chat_id, caption=caption)
                 except Exception as ep:
                     clear_queue(chat_id)
                     await xnxx.edit(f"`{ep}`")
@@ -402,7 +402,7 @@ async def vplay(event):
 
 
 #playlist
-@thulasi.on(events.NewMessage(pattern="^[?!/]pl,q"))
+@thulasi.on(events.NewMessage(pattern="^[?!/]pl"))
 @is_admin
 async def vc_playlist(event, perm):
     chat_id = event.chat_id
@@ -432,7 +432,7 @@ async def vc_playlist(event, perm):
 
 
 #leavevc
-@thulasi.on(events.NewMessage(pattern="^[?!/]leavevc,leave"))
+@thulasi.on(events.NewMessage(pattern="^[?!/]lvc"))
 @is_admin
 async def leavevc(event, perm):
     xnxx = await event.reply("Processing")
