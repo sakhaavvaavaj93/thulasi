@@ -53,6 +53,16 @@
             "description": "Fill there your group username else leave",
             "required": false,
             "value": ""
+        },
+       "START_IMG": {
+            "description": "fill with the telethon session string from @TELESTRING_BOT",
+            "required": false,
+            "value" : ""
+        },
+        "CMD_IMG": {
+            "description": "Don't Change this!",
+            "required": false,
+            "value": ""
         }
     }
   }
