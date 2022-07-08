@@ -1,0 +1,45 @@
+{
+    "name": "തുളസി കതിർ",
+    "description": "Music allow you to stream music trought the telegram voice chat feature Based on Telethon.",
+    "keywords": ["thulasi","vcbot"],
+    "repository": "https://github.com/sakhaavvaavaj93/thulasi/tree/main",
+    "logo":"https://telegra.ph/file/1aaf04b524b231ae0d7b1.jpg",
+  "stack": "container",
+    "env": {
+        "STRING_SESSION": {
+            "description": "fill with the telethon session string from @TELESTRING_BOT",
+            "required": true
+        },
+        "HEROKU_MODE": {
+            "description": "Don't Change this!",
+            "required": true,
+            "value": "ENABLE"
+        },
+        "SUPPORT": {
+            "description": "Fill there your group username else leave",
+            "required": false,
+            "value": "kk_kovilakam"
+        },
+        "CHANNEL": {
+            "description": "Fill there your Channel username else leave",
+            "required": false,
+            "value": "KANTHARI_WRITINGS"
+        },
+        "BOT_USERNAME": {
+            "description": "Fill there your bot username",
+            "required": false,
+            "value": "Zaid2_Robot"
+        },
+        "ASSISTANT_ID": {
+            "description": "Fill there your Assistant id",
+            "required": true,
+            "value": "1669178360"
+        },
+        "BOT_TOKEN": {
+            "description": "fill with your bot token get from @BotFather on telegram",
+            "required": true,
+            "value": ""
+        }
+
+    }
+  }
