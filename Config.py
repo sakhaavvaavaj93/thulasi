@@ -1,8 +1,8 @@
 import os
 
 class Config(object):
-    API_ID = int(os.environ.get("APP_ID", ""))
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = int(os.environ.get("APP_ID", "1975955"))
+    API_HASH = os.environ.get("API_HASH", "37525b706457801fc7b052e8a0b94f23")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
     STRING_SESSION = os.environ.get("STRING_SESSION", "")
     HEROKU_MODE = os.environ.get("HEROKU_MODE", None)
@@ -12,4 +12,4 @@ class Config(object):
     CHANNEL = os.environ.get("CHANNEL", "KANTHARI_WRITINGS")
     START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/1aaf04b524b231ae0d7b1.png")
     CMD_IMG = os.environ.get("CMD_IMG", "https://telegra.ph/file/1aaf04b524b231ae0d7b1.png")
-    ASSISTANT_ID = int(os.environ.get("ASSISTANT_ID", ""))
+    ASSISTANT_ID = int(os.environ.get("ASSISTANT_ID", "5415085732"))
