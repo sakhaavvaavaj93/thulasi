@@ -1,4 +1,6 @@
-FROM python:3.9.7-slim-buster
+FROM debian:11
+FROM python:3.10.1-slim-buster
+
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install git curl python3-pip ffmpeg -y
 RUN pip3 install -U pip
@@ -9,4 +11,4 @@ RUN npm i -g npm
 COPY . /app/
 WORKDIR /app/
 RUN pip3 install -U -r requirements.txt
-CMD bash main.py
+CMD bash start
