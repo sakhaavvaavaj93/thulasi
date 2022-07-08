@@ -1,7 +1,7 @@
 
 # തുളസി
 
-<p align="center"><a<img src="https://telegra.ph/file/1aaf04b524b231ae0d7b1.jpg" width="640" height="640"/></a></p>
+![thulasi](https://telegra.ph/file/1aaf04b524b231ae0d7b1.jpg)
 
 <p align="center">𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧</p>
 
