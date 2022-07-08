@@ -28,41 +28,28 @@
         "BOT_USERNAME": {
             "description": "Fill there your bot username",
             "required": false,
-            "value": "Stenzle_MariaMusicbot"
+            "value": "Zaid2_Robot"
         },
         "ASSISTANT_ID": {
             "description": "Fill there your Assistant id",
             "required": true,
             "value": ""
         },
+        "MANAGEMENT_MODE": {
+            "description": "fill with the telethon session string from @TELESTRING_BOT",
+            "required": false,
+            "value" : ""
+        },
+
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
             "required": true,
             "value": ""
         },
-        "APP_ID": {
-            "description": "fill with the telethon session string from @TELESTRING_BOT",
-            "required": true
-        },
-        "MANAGEMENT_MODE": {
-            "description": "Don't Change this!",
-            "required": true,
-            "value": "ENABLE"
-        },
-        "APP_HASH": {
-            "description": "Fill there your group username else leave",
-            "required": false,
-            "value": ""
-        },
-       "START_IMG": {
-            "description": "fill with the telethon session string from @TELESTRING_BOT",
-            "required": false,
-            "value" : ""
-        },
-        "CMD_IMG": {
-            "description": "Don't Change this!",
-            "required": false,
-            "value": ""
+        "": {
+        "description": "fill with your bot token get from @BotFather on telegram",
+        "required": true,
+        "value": ""
         }
     }
   }
