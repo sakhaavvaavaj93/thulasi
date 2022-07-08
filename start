@@ -1,3 +1,3 @@
-git clone $REPO XYZ
-cd XYZ
+git clone $REPO https://github.com/sakhaavvaavaj93/thulasi.git
+cd https://github.com/sakhaavvaavaj93/thulasi.git
 python3 -m thulasi
