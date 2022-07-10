@@ -422,9 +422,9 @@ async def vc_playlist(event, perm):
                 hmmmm = chat_queue[x][3]
                 PLAYLIST = PLAYLIST + "\n" + \
                     f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
-          #  await xnxx.edit(PLAYLIST, link_preview=False)
-   # else:
-      #  await event.reply("**Ntg is Streaming**")
+            await xnxx.edit(PLAYLIST, link_preview=False)
+    else:
+        await event.reply("**Ntg is Streaming**")
 
 
 
