@@ -409,7 +409,7 @@ async def vc_playlist(event, perm):
     if chat_id in QUEUE:
         chat_queue = get_queue(chat_id)
         if len(chat_queue) == 1:
-            await event.reply(
+        xnxx = await event.reply(
                 f"**�PlAYLIST:**\n• [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 link_preview=False,
             )
@@ -422,7 +422,7 @@ async def vc_playlist(event, perm):
                 hmmmm = chat_queue[x][3]
                 PLAYLIST = PLAYLIST + "\n" + \
                     f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
-          #  await event.reply(PLAYLIST, link_preview=False)
+          #  await xnxx.edit(PLAYLIST, link_preview=False)
    # else:
       #  await event.reply("**Ntg is Streaming**")
 
@@ -464,6 +464,7 @@ async def vc_skip(event, perm):
                 f"**⏭ Skipped**\n**🎧 Now Playing** - [{op[0]}]({op[1]})",
                 link_preview=False,
             )
+            await event.delete()
     else:
         skip = event.text.split(maxsplit=1)[1]
         DELQUE = "**Removing Following Songs From Queue:**"
