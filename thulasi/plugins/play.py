@@ -420,7 +420,7 @@ async def vc_playlist(event, perm):
                 hmm = chat_queue[x][0]
                 hmmm = chat_queue[x][2]
                 hmmmm = chat_queue[x][3]
-                PLAYLIST = PLAYLIST + "\n" + \
+         if PLAYLIST = PLAYLIST + "\n" + \
                     f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
             await xnxx.edit(PLAYLIST, link_preview=False)
     else:
