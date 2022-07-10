@@ -415,14 +415,14 @@ async def vc_playlist(event, perm):
             )
       else:
             PLAYLIST = f"**🎧 PLAYLIST:**\n**• [{chat_queue[0][0]}]({chat_queue[0][2]})** | `{chat_queue[0][3]}` \n\n**• Upcoming Streaming:**"
-            l = len(chat_queue)
+        if  l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
                 hmmm = chat_queue[x][2]
                 hmmmm = chat_queue[x][3]
-          if PLAYLIST = PLAYLIST + "\n" + \
+            PLAYLIST = PLAYLIST + "\n" + \
                     f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
-                await xnxx.edit(PLAYLIST, link_preview=False)
+            await xnxx.edit(PLAYLIST, link_preview=False)
         else:
             await event.reply("**Ntg is Streaming**")
 
