@@ -399,7 +399,7 @@ async def vplay(event):
                     await xnxx.edit(f"`{ep}`")
 
 #playlist
-@Zaid.on(events.NewMessage(pattern="^[?!/]playlist"))
+@thulasi.on(events.NewMessage(pattern="^[?!/]playlist"))
 @is_admin
 async def vc_playlist(event, perm):
     chat_id = event.chat_id
