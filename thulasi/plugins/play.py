@@ -396,40 +396,32 @@ async def vplay(event):
                 #    await event.client.send_file(chat_id, caption=caption)
                 except Exception as ep:
                     clear_queue(chat_id)
-                    await xnxx.edit(f"`{ep}`")
-
-
-
+                    await xnxx.edit(f"`{ep}`"
 
 #playlist
-@thulasi.on(events.NewMessage(pattern="^[?!/]pl"))
+@Zaid.on(events.NewMessage(pattern="^[?!/]playlist"))
 @is_admin
 async def vc_playlist(event, perm):
     chat_id = event.chat_id
     if chat_id in QUEUE:
         chat_queue = get_queue(chat_id)
         if len(chat_queue) == 1:
-        await event.reply(
+            await event.reply(
                 f"**�PlAYLIST:**\n• [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 link_preview=False,
             )
-    else:
-        PLAYLIST = f"**🎧 PLAYLIST:**\n**• [{chat_queue[0][0]}]({chat_queue[0][2]})** | `{chat_queue[0][3]}` \n\n**• Upcoming Streaming:**"
-        if  l = len(chat_queue)
+        else:
+            PLAYLIST = f"**🎧 PLAYLIST:**\n**• [{chat_queue[0][0]}]({chat_queue[0][2]})** | `{chat_queue[0][3]}` \n\n**• Upcoming Streaming:**"
+            l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
                 hmmm = chat_queue[x][2]
                 hmmmm = chat_queue[x][3]
-            PLAYLIST = PLAYLIST + "\n" + \
+                PLAYLIST = PLAYLIST + "\n" + \
                     f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
-            await xnxx.edit(PLAYLIST, link_preview=False)
-    # else:
-         # await event.reply("**Ntg is Streaming**")
-
-
-
-
-
+            await event.edit(PLAYLIST, link_preview=False)
+    else:
+        await event.reply("**Ntg is Streaming**")
 
 #leavevc
 @thulasi.on(events.NewMessage(pattern="^[?!/]lvc"))
