@@ -1,8 +1,8 @@
 import os
 
 class Config(object):
-    API_ID = int(os.environ.get("APP_ID", "1975955"))
-    API_HASH = os.environ.get("API_HASH", "37525b706457801fc7b052e8a0b94f23")
+    API_ID = int(os.environ.get("APP_ID", "16556281"))
+    API_HASH = os.environ.get("API_HASH", "ee38ed3a893001a782f675c6f747ba09")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "5567453202:AAGUBvDK8pKmB3zxks3ZZOIdx8rbG229ufw")
     STRING_SESSION = os.environ.get("STRING_SESSION", "")
     HEROKU_MODE = os.environ.get("HEROKU_MODE", "ENABLE")
