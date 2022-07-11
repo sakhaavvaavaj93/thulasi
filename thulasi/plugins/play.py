@@ -396,7 +396,7 @@ async def vplay(event):
                 #    await event.client.send_file(chat_id, caption=caption)
                 except Exception as ep:
                     clear_queue(chat_id)
-                    await xnxx.edit(f"`{ep}`"
+                    await xnxx.edit(f"`{ep}`")
 
 #playlist
 @Zaid.on(events.NewMessage(pattern="^[?!/]playlist"))
